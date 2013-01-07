@@ -4,7 +4,32 @@
     "version":     "1.0",
     "homepage":    "http://www.mugo.ca",
     "licence":     "GPL-2.0",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.zendframework.com/"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/pkamps/BaseXMS"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/pkamps/BaseXClient"
+        }
+    ],
     "require": {
-        "php": ">=5.3.1"
+        "php": ">=5.3.1",
+        "pkamps/BaseXMS"              : "dev-master",
+        "pkamps/BaseXClient"          : "dev-master",
+        "zendframework/zendframework" : "2.*"
+    },
+    "autoload" :
+    {
+        "psr-0" :
+        {
+            "BaseXMS"     : "vendor/pkamps/",
+            "BaseXClient" : "vendor/pkamps/" 
+        }
     }
 }

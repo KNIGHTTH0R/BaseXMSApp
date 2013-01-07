@@ -1,10 +1,7 @@
 <?php
 return array(
     'modules' => array(
-        'BaseXMSZend',
-    		'BaseXMSInspect',
-    		'Sandbox',
-    		//'Application',
+		'BaseXMSZend',
     ),
     'module_listener_options' => array(
         'config_glob_paths'    => array(
@@ -14,9 +11,17 @@ return array(
             './module',
             './vendor',
         ),
-    ),	
-	// TODO: find a way to override the normal Application Factory process
-	'service_listener_optionsd' => array(
-			'service_manager' => 'application',
-	),
+    ),
+	#'service_manager' => array(
+#			'factories' => array(
+#				'Application' => 'BaseXMS\Application'
+#			)
+#	),
+	'servicelistener' => array(
+			'defaultServiceConfig' => array(
+					'factories' => array(
+							'Application' => 'BaseXMS\Application'
+					)
+			)
+	)
 );

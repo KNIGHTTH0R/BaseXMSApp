@@ -18,5 +18,11 @@ return array(
 				'user' => 'admin',
 				'pass' => 'admin',
 				'db'   => 'base',
+				),
+		'service_manager' => array(
+				'factories' => array(
+						'Application' => 'BaseXMS\ApplicationFactory'
 				)
+		),
+		
 );

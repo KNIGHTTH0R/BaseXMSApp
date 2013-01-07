@@ -7,10 +7,11 @@ return array(
             ),
         ),
     ),
-    'controllers' => array(
-        'invokables' => array(
-            'index' => 'BaseXMSZend\Controller\BaseXMSController'
-        ),
-    ),
+
+	#'controllers' => array(
+    #    'invokables' => array(
+    #        'index' => 'BaseXMSZend\Controller\BaseXMSController'
+    #    ),
+    #),
 	'fips' => array( 1 => 'b' ),
 );
