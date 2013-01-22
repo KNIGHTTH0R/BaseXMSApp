@@ -24,11 +24,11 @@ $a->stop( 'Overall' );
 $a->memory_usage( 'Before sending response' );
 echo $a->getDataAsHtml();
 
-$debug = '<div id="echo-output"><h2>Echo Output</h2>' . ob_get_contents() . '</div>';
+$debug = '<div id="echo-output"><h2>Echo Output</h2><pre>' . ob_get_contents() . '</pre></div>';
 ob_end_clean();
 
+//print_r( $response );
 // We did not register a render or finish event but we send the response here
 $response->send();
 
 echo $debug;
-echo memory_get_peak_usage();
