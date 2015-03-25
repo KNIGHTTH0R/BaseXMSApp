@@ -19,9 +19,14 @@ return array(
 				'pass' => 'admin',
 				'db'   => 'base',
 				),
-		'service_manager' => array(
-				'factories' => array(
-						'Application' => 'BaseXMS\ApplicationFactory'
+		'service_manager' => array
+		(
+				'factories' => array
+				(
+						'log'         => 'BaseXMS\Log\Factory',
+						'xmldb'       => 'BaseXMS\BaseXFactory',
+						'accumulator' => 'BaseXMS\Debug\Factory',
+						'session'     => 'BaseXMS\Session\Factory'
 				)
 		),
 		

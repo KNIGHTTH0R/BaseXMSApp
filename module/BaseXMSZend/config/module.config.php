@@ -9,7 +9,7 @@ return array(
 	    ),
 	
 		'siteaccesses' => array(
-				'' => '\BaseXMS\SiteAccess' //default access
+				'' => '\BaseXMS\Mvc\SiteAccess' //default access
 		),
 		
 		'designs' => array(
@@ -18,12 +18,17 @@ return array(
 		
 		'designrules' => array(
 				'base' => array(
-						'/context/type[text() = "html"]' => '\BaseXMS\UiComponent\Html',
-						'/context/type[text() = "head"]' => '\BaseXMS\UiComponent\Head',
-						'/context/type[text() = "body"]' => '\BaseXMS\UiComponent\Body',
-						'/context/type[text() = "debug"]' => '\BaseXMS\UiComponent\Debug',
-						'/context/type[text() = "content"]' => '\BaseXMS\UiComponent\Content',
-						'/context/type[text() = "inline-css"]' => '\BaseXMS\UiComponent\Head\InlineCss'
+						'/context/type[text() = "root"]'        => '\BaseXMS\UiComposer\UiComponent\Root',
+						'/context/type[text() = "html"]'        => '\BaseXMS\UiComposer\UiComponent\Html',
+						'/context/type[text() = "head"]'        => '\BaseXMS\UiComposer\UiComponent\Head',
+						'/context/type[text() = "body"]'        => '\BaseXMS\UiComposer\UiComponent\Body',
+						'/context/type[text() = "debug"]'       => '\BaseXMS\UiComposer\UiComponent\Debug\Debug',
+						'/context/type[text() = "logging"]'     => '\BaseXMS\UiComposer\UiComponent\Debug\Logging',
+						'/context/type[text() = "accumulator"]' => '\BaseXMS\UiComposer\UiComponent\Debug\Accumulator',
+						'/context/type[text() = "content"]'     => '\BaseXMS\UiComposer\UiComponent\Content',
+						'/context/type[text() = "css-inline"]'  => '\BaseXMS\UiComposer\UiComponent\Head\CssInline',
+						'/context/type[text() = "css-file"]'    => '\BaseXMS\UiComposer\UiComponent\Head\CssFile',
+						'/context/type[text() = "jsfile"]'      => '\BaseXMS\UiComposer\UiComponent\Head\JsFile',
 				)
 		)
 );

@@ -2,6 +2,10 @@
 return array(
     'modules' => array(
 		'BaseXMSZend',
+    		'BaseXMSInspect',
+    		'BaseXMSRest',
+    		'MugoDam',
+    		'Sandbox'
     ),
     'module_listener_options' => array(
         'config_glob_paths'    => array(
@@ -17,11 +21,11 @@ return array(
 #				'Application' => 'BaseXMS\Application'
 #			)
 #	),
-	'servicelistener' => array(
-			'defaultServiceConfig' => array(
-					'factories' => array(
-							'Application' => 'BaseXMS\Application'
-					)
-			)
-	)
+#	'servicelistener' => array(
+#			'defaultServiceConfig' => array(
+#					'factories' => array(
+#							'Application' => 'BaseXMS\Application'
+#					)
+#			)
+#	)
 );

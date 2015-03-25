@@ -22,7 +22,8 @@
         "php": ">=5.3.1",
         "pkamps/BaseXMS"              : "dev-master",
         "pkamps/BaseXClient"          : "dev-master",
-        "zendframework/zendframework" : "2.*"
+        "zendframework/zendframework" : "2.*",
+	"zendframework/zendoauth"     : "2.0.*"
     },
     "autoload" :
     {

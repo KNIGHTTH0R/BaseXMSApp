@@ -1,0 +1,13 @@
+The module overrides the default siteaccess in order to have
+a custom URL dispatcher:
+
+/<module>/<function>
+
+All parameters are submitted via GET or POST.
+
+This RESTFUL should be a simple wrapper on top of a powerful data API. Because I want to user not to learn a data API and a complete different data API.
+Also, it should be easier to implement the RESTFUL API.
+
+The response is pure text or a boolean value - not sure if I need to change that into a json response.
+Let's try to use all features of the HTTP response (response codes, headers etc).
+

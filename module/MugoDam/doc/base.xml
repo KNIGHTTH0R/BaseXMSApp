@@ -1,0 +1,43 @@
+<node id='1'>
+	<accessPaths class='\BaseXMS\RequestHandler\UiComposer'>
+		<entry type="main" path='' />
+	</accessPaths>
+
+	<content class=''>
+		<sort>0000001</sort>
+		<raw>
+			Hello <b>beautiful</b> DAM!!
+		</raw>
+	</content>
+
+	<node id='handshake'>
+		<accessPaths class='\BaseXMS\RequestHandler\UiComposer'>
+			<entry type="main" path='handshake' />
+		</accessPaths>
+	
+		<content class='image'>
+			<sort>0000001</sort>
+			<raw>
+				<source>http://localhost/temp/handshake.jpg</source>
+				<created>12312332</created>
+				<size>123123</size>
+			</raw>
+		</content>
+	</node>
+
+	<node id='superearth'>
+		<accessPaths class='\BaseXMS\RequestHandler\UiComposer'>
+			<entry type="main" path='superearth' />
+		</accessPaths>
+	
+		<content class='image'>
+			<sort>0000001</sort>
+			<raw>
+				<source>http://localhost/temp/superearth.jpg</source>
+				<created>12312332</created>
+				<size>123123</size>
+			</raw>
+		</content>
+	</node>
+
+</node>

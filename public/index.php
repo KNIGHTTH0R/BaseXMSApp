@@ -1,34 +1,30 @@
 <?php
-/**
- * This makes our life easier when dealing with paths. Everything is relative
- * to the application root now.
- */
-chdir(dirname(__DIR__));
+use BaseXMS\Mvc\Application;
 
 define( 'SCRIPT_START', microtime( true ) );
 
+chdir(dirname(__DIR__));
+
+// Capture all direct output and shows it at the end of the html doc
+$buffer = '';
 ob_start();
-
-// Setup autoloading
-include 'init_autoloader.php';
-
-// Run the application!
-$response = Zend\Mvc\Application::init( include 'config/application.config.php' )->run();
-
-
-// Print out overall timing
-$a = new BaseXMS\Accumulator();
-$a->start( 'Overall', SCRIPT_START );
-$a->stop( 'Overall' );
-
-$a->memory_usage( 'Before sending response' );
-echo $a->getDataAsHtml();
-
-$debug = '<div id="echo-output"><h2>Echo Output</h2><pre>' . ob_get_contents() . '</pre></div>';
+{
+	// Setup autoloading
+	include 'init_autoloader.php';
+	
+	// Run the application!
+	$application = Application::init();
+	$response = $application->route()->setSiteAccess()->getResponse();
+	
+	if( ob_get_length() )
+	{
+		$buffer = '<div id="echo-output"><h2>Echo Output</h2><pre>' . ob_get_contents() . '</pre></div>';
+	}
+}
 ob_end_clean();
-
-//print_r( $response );
-// We did not register a render or finish event but we send the response here
+	
 $response->send();
 
-echo $debug;
+echo $buffer;
+
+?>
