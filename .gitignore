@@ -4,4 +4,3 @@ vendor
 .project
 composer.lock
 module/Sandbox
-tests
